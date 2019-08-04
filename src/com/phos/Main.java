@@ -12,7 +12,7 @@ public class Main {
         //principal
         System.out.print("Principal: ");
         Scanner scanner = new Scanner(System.in);
-        Long principal = scanner.nextLong();
+        int principal = scanner.nextInt();
 
         // annual interest rate
         System.out.print("Annual Interest Rate: ");
