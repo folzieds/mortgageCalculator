@@ -6,6 +6,9 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        final byte MONTHS_IN_YEARS = 12;
+        final byte PERCENT = 100;
+
         //principal
         System.out.print("Principal: ");
         Scanner scanner = new Scanner(System.in);
@@ -16,13 +19,13 @@ public class Main {
         Double rate = scanner.nextDouble();
 
         // calculates the monthly interest rate
-        Double monthlyRate = rate / (12 * 100);
+        Double monthlyRate = rate / (MONTHS_IN_YEARS * PERCENT);
 
         // Period in years
         System.out.print("Period (years): ");
         Double period = scanner.nextDouble();
         // calculates the period in months
-        Double monthlyPeriod = period * 12;
+        Double monthlyPeriod = period * MONTHS_IN_YEARS;
 
         // calculates the (1 + r) ^ n
         Double power = Math.pow((1 + monthlyRate),monthlyPeriod);
